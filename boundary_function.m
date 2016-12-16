@@ -1,8 +1,5 @@
 function [ result ] = boundary_function( x, y, t )
 
-% if x == -pi
-%     result = 1.2;
-% end
 left=-1*pi;
 right=1*pi;
 bottom=-1*pi;
