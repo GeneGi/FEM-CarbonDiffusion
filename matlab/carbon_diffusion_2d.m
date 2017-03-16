@@ -29,8 +29,11 @@ for k = 1 : Nt-1
     b1 = assemble_vector_b('func_f', P, T, Pb, Tb, N, Nb, Nlb, k*dt, D, 0, 0);
     b2 = A1 * C(:, k);
     b = dt * b1 + b2;
+    disp('after');
     [A, b] = treat_boundary('boundary_function', boundary_nodes, A, b, Pb, dt*k);
+    b
     C(:, k+1) = A \ b;
+    C(:, k+1)
 end
 
 for k = 1 : Nt

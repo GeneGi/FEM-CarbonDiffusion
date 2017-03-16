@@ -23,9 +23,10 @@ basis_type = 'linear';
 tempature = 1183;        %the Diffusion factor D is related to tempature
 
 %for each step size h, caculate the numerical solution and maxerror
-for i = 1 : H_num
+for i = 1 : 3%H_num
     h = H(:, i);
-    [C, E(i, :)] = carbon_diffusion_2d(omega, h, Nt, dt, basis_type, tempature);
+    [C, E(i, :)] = carbon_diffusion_2d(omega, h, Nt, dt, basis_type, tempature)
+    
 end
 
 %caculate the order of convergence with the max error for each h

@@ -18,16 +18,6 @@ k = 1;
 b = assemble_vector_b('func_f', P, T, Pb, Tb, N, Nb, Nlb, t_min+k*dt, D, 0, 0);
 
 vertices = P(:, T(:, 1))
-basis_function(3, 5, vertices, 1, 0, 0);
-basis_function(3, 5, vertices, 2, 0, 0);
-basis_function(3, 5, vertices, 3, 0, 0);
-basis_function(3, 5, vertices, 1, 0, 1);
-basis_function(3, 5, vertices, 2, 0, 1);
-basis_function(3, 5, vertices, 3, 0, 1);
-basis_function(3, 5, vertices, 1, 1, 0);
-basis_function(3, 5, vertices, 2, 1, 0);
-basis_function(3, 5, vertices, 3, 1, 0);
-Pb
 size(Pb)
 Nt = (t_max - t_min) / dt;
 C = zeros ( Nb, Nt );
